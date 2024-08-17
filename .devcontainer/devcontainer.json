@@ -1,0 +1,64 @@
+{
+  "name": "MMVC Client",
+  "dockerComposeFile": "docker-compose.yaml",
+  "service": "mmvc_client",
+  "workspaceFolder": "/home/vscode/app",
+  "features": {
+    "ghcr.io/devcontainers/features/git:1": {},
+    "ghcr.io/devcontainers/features/common-utils:2": {
+      "configureZshAsDefaultShell": true
+    },
+    "ghcr.io/devcontainers-contrib/features/ffmpeg-apt-get:1": {},
+    "ghcr.io/devcontainers/features/python:1": {
+      "version": "3.12.5"
+    },
+    "ghcr.io/devcontainers/features/node:1": {
+      "version": "22.6.0"
+    },
+    "ghcr.io/shyim/devcontainers-features/bun:0": {
+      "version": "1.1.24"
+    },
+    "ghcr.io/devcontainers-contrib/features/poetry:2": {
+      "version": "1.7.1"
+    },
+    "ghcr.io/nikobockerman/devcontainer-features/poetry-persistent-cache:1": {},
+    "ghcr.io/devcontainers/features/docker-outside-of-docker:1": {
+      "moby": false,
+      "dockerDashComposeVersion": "v2"
+    }
+  },
+  "mounts": [
+    "type=bind,source=/dev/bus/usb,target=/dev/bus/usb"
+  ],
+  "initializeCommand": "/bin/zsh .devcontainer/initializeCommand.sh",
+  "postAttachCommand": "/bin/zsh .devcontainer/postAttachCommand.sh",
+  "postCreateCommand": "/bin/zsh .devcontainer/postCreateCommand.sh",
+  "customizations": {
+    "vscode": {
+      "extensions": [
+        "EditorConfig.EditorConfig",
+        "GitHub.copilot",
+        "GitHub.copilot-chat",
+        "antfu.file-nesting",
+        "eamodio.gitlens",
+        "ms-python.python",
+        "ms-toolsai.jupyter",
+        "ms-vscode.makefile-tools",
+        "tamasfe.even-better-toml"
+      ],
+      "settings": {
+        "debug.internalConsoleOptions": "neverOpen",
+        "diffEditor.diffAlgorithm": "advanced",
+        "diffEditor.experimental.showMoves": true,
+        "diffEditor.renderSideBySide": false,
+        "editor.formatOnPaste": true,
+        "editor.formatOnSave": true,
+        "editor.guides.bracketPairs": "active",
+        "files.watcherExclude": {
+          "**/node_modules/**": true
+        },
+        "scm.defaultViewMode": "tree"
+      }
+    }
+  }
+}

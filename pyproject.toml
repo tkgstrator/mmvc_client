@@ -1,0 +1,19 @@
+[tool.poetry]
+name = "mmvc-client"
+version = "0.1.0"
+description = ""
+authors = ["tkgstrator <nasawake.am@gmail.com>"]
+license = "MIT"
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = "^3.12"
+numpy = "^2.0.1"
+pyworld = "^0.3.4"
+tqdm = "^4.66.5"
+requests = "^2.32.3"
+
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
